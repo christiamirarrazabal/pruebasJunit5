@@ -3,7 +3,7 @@ pipeline {
 
     tools { 
         maven 'jenkinsmaven'
-        jdk 'java11'
+        jdk 'java17'
     }
 
     stages {
@@ -56,7 +56,7 @@ pipeline {
                 groupId: 'cl.awakelab.junitapp',
                 version: '0.0.1-SNAPSHOT',
                 repository: 'maven-snapshots',
-                credentialsId: 'nexuscredenciales',
+                credentialsId: 'NexusLogin',
                 artifacts: [
                     [artifactId: 'proyectoJunit',
                     classifier: '',
